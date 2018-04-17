@@ -7,8 +7,8 @@ allprojects {
        maven {
             url "http://maven.camsgear.com/artifactory/gradle-release-local"
             credentials {
-                username 'camsgear'
-                password 'Camsgear88'
+                username 'YOUR_USERNAME'
+                password 'YOUR_PASSWORD'
             }
         }
     ｝
@@ -56,12 +56,14 @@ public void setOptionCategory(PlayerOptionCategory category)
 ```
 ##### 参数说明：
 - `category` - PlayerOptionCategory有四种流类型
+```
 ｛
     CATEGORY_NORMAL（一般类型）
     CATEGORY_RTSP（RTSP流）
     CATEGORY_RTMP（RTMP流）
     CATEGORY_P2P(视频流通过Ｐ２Ｐ)
   ｝
+```
 ##### 使用示例：
   ```java
   PlayerOptionCategory mPlayerOption = PlayerOptionCategory.CATEGORY_NORMAL;
