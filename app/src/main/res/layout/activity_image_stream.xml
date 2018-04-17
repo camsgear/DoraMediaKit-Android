@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <me.camdora.dora.media.player.widget.DoraVideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mList">
+    </android.support.v7.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#ce324057"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <SeekBar
+            android:id="@+id/sb_image_stream_seek"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:max="1440"
+            />
+        <TextView
+            android:id="@+id/tv_jump_current"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="回到现在"
+            android:textColor="@android:color/white"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_message_image_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2017年11月22日 16:56"
+        android:background="#ce324057"
+        android:padding="10dp"
+        android:layout_above="@id/bottom_view"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        />
+
+    <assistant.camsgear.doramediakitdemo.widget.PanoModeView
+        android:id="@+id/image_stream_pano_mode_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/tv_message_image_time"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"
+        />
+
+    <ProgressBar
+        android:id="@+id/pb_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>

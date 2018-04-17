@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DoraMediaKitDemo</string>
+    <string name="title_activity_raw_video">RawVideoActivity</string>
+
+    <string name="normal">普通</string>
+    <string name="planet">小行星</string>
+    <string name="fisheye">鱼眼</string>
+
+    <string name="desktop_mount">正放</string>
+    <string name="ceiling_mount">吊装</string>
+    <string name="wall_mount">壁挂</string>
+
+    <string name="gyro_on">陀螺仪开</string>
+    <string name="gyro_off">陀螺仪关</string>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".activity.MainActivity">
+
+    <me.camdora.dora.media.player.widget.DoraVideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:probe_size="10000000" >
+
+    </me.camdora.dora.media.player.widget.DoraVideoView>
+    <assistant.camsgear.doramediakitdemo.widget.GyroSwitchView
+        android:id="@+id/video_gyro_switch_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"/>
+    <assistant.camsgear.doramediakitdemo.widget.PanoModeView
+        android:id="@+id/video_pano_mode_view"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="5dp"/>
+    <assistant.camsgear.doramediakitdemo.widget.MountModeView
+        android:id="@+id/video_mount_mode_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="115dp"
+        android:layout_marginBottom="5dp"/>
+    <Button
+        android:id="@+id/video_reset_angle"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:background="#ce324057"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="170dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#ffffff"
+        android:textSize="8sp"
+        android:text="重置视角"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="isShowTimestamp"
+        android:text="时间戳开关"/>
+
+</RelativeLayout>
