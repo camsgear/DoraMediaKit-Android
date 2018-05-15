@@ -59,6 +59,9 @@ DoraVideoView.java 图片列表接口
 - [stopPlayback](#stopplayback)
 - [stopBackgroundPlay](#stopbackgroundplay)
 - [snapshot](#snapshot)
+- [startRecordFile](#startRecordFile)
+- [stopRecordFile](#stopRecordFile)
+- [screenShot](#screenShot)
 
 
 #### setOptionCategory
@@ -312,4 +315,55 @@ public Bitmap snapshot()
 
             }
         });
+  ```
+  #### startRecordFile
+  ##### 描述:
+  录制mp4文件到app
+  ##### 函数定义:
+  ```java
+  public void startRecordFile(String fileName)
+  ```
+  ##### 参数说明：
+  - `fileName` - 要保存的文件完整路径
+  ##### 使用示例：
+    ```java
+        String path = Environment.getExternalStorageDirectory() + "/" + "Download" + "/";
+        File folder = new File(path);
+        if (!folder.exists() && !folder.mkdirs()) {
+            return;
+        }
+        long dataTake = System.currentTimeMillis();
+        final String name  = path + dataTake + ".mp4";
+        mDoraVideoView.startRecordFile(name);
+    ```
+  #### stopRecordFile
+  ##### 描述:
+  stop mp4 record
+  ##### 函数定义:
+  ```java
+  public void stopRecordFile()
+  ```
+  ##### 使用示例：
+    ```java
+       mDoraVideoView.stopRecordFile();
+    ```
+  #### screenShot
+  ##### 描述:
+  录制jpg文件到app
+  ##### 函数定义:
+  ```java
+  public void screenShot(String fileName)
+  ```
+  ##### 参数说明：
+  - `fileName` - 要保存的文件完整路径
+  ##### 使用示例：
+  ```java
+        String path = Environment.getExternalStorageDirectory() + "/" + "Download" + "/";
+        File folder = new File(path);
+        if (!folder.exists() && !folder.mkdirs()) {
+            return;
+        }
+        long dataTake = System.currentTimeMillis();
+        final String name  = path + dataTake + ".jpg";
+        mDoraVideoView.screenShot(name);
   ```
