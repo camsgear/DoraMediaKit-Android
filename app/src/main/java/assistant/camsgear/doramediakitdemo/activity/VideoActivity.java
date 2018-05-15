@@ -171,6 +171,33 @@ public class VideoActivity extends AppCompatActivity implements PanoModeView.OnP
         mDoraVideoView.isShowTimeStamp(timestampEnable);
     }
 
+    public void startRecord(){
+        String path = Environment.getExternalStorageDirectory() + "/" + "Download" + "/";
+        File folder = new File(path);
+        if (!folder.exists() && !folder.mkdirs()) {
+            return;
+        }
+        long dataTake = System.currentTimeMillis();
+        final String name  = path + dataTake + ".mp4";
+        Log.i(TAG, "jpegName = " + name);
+        mDoraVideoView.startRecordFile(name);
+    }
+
+    public void stopRecord(){
+        mDoraVideoView.stopRecordFile();
+    }
+    //save video frame to jpg
+    public void snapshot(){
+        String path = Environment.getExternalStorageDirectory() + "/" + "Download" + "/";
+        File folder = new File(path);
+        if (!folder.exists() && !folder.mkdirs()) {
+            return;
+        }
+        long dataTake = System.currentTimeMillis();
+        final String name  = path + dataTake + ".jpg";
+        mDoraVideoView.screenShot(name);
+    }
+
     @Override
     protected void onDestroy() {
         if(mDoraVideoView != null) {

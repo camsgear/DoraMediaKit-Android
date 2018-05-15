@@ -21,8 +21,8 @@ allprojects {
         maven {
             url "http://maven.camsgear.com/artifactory/gradle-release-local"
             credentials {
-                username 'camsgear'
-                password 'Camsgear88'
+                username 'xxxx'
+                password 'xxxxx'
             }
         }
     }
