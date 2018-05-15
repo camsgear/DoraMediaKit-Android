@@ -326,7 +326,7 @@ public Bitmap snapshot()
   ##### 参数说明：
   - `fileName` - 要保存的文件完整路径
   ##### 使用示例：
-    ```java
+  ```java
         String path = Environment.getExternalStorageDirectory() + "/" + "Download" + "/";
         File folder = new File(path);
         if (!folder.exists() && !folder.mkdirs()) {
@@ -335,7 +335,7 @@ public Bitmap snapshot()
         long dataTake = System.currentTimeMillis();
         final String name  = path + dataTake + ".mp4";
         mDoraVideoView.startRecordFile(name);
-    ```
+  ```
   #### stopRecordFile
   ##### 描述:
   stop mp4 record
@@ -344,9 +344,9 @@ public Bitmap snapshot()
   public void stopRecordFile()
   ```
   ##### 使用示例：
-    ```java
+  ```java
        mDoraVideoView.stopRecordFile();
-    ```
+  ```
   #### screenShot
   ##### 描述:
   录制jpg文件到app
