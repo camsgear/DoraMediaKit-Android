@@ -59,9 +59,9 @@ DoraVideoView.java 图片列表接口
 - [stopPlayback](#stopplayback)
 - [stopBackgroundPlay](#stopbackgroundplay)
 - [snapshot](#snapshot)
-- [startRecordFile](#startRecordFile)
-- [stopRecordFile](#stopRecordFile)
-- [screenShot](#screenShot)
+- [startRecordFile](#startrecordfile)
+- [stopRecordFile](#stoprecordfile)
+- [screenShot](#screenshot)
 
 
 #### setOptionCategory
