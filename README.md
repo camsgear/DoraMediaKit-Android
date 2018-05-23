@@ -95,6 +95,13 @@ public void setCalibrationData(String data)
 ```
 ##### 参数说明：
 - `data` - 双鱼眼图片的标定拼接参数
+```
+｛
+    GlobalDefine.CALIBRATION_DOUBLE_FISHEYE_265（双鱼眼-H265）
+    GlobalDefine.CALIBRATION_MONO_FISHEYE()（单鱼眼）
+    GlobalDefine.CALIBRATION_DOUBLE_FISHEYE（双鱼眼）
+｝
+```
 ##### 使用示例：
   ```java
   mDoraVideoView.setCalibrationData(GlobalDefine.CALIBRATION_DOUBLE_FISHEYE_265);
@@ -108,6 +115,14 @@ public void setMediaInfo(String mediaInfoString)
 ```
 ##### 参数说明：
 - `mediaInfoString` - 设置播放器的媒体参数
+```
+｛
+    MediaInfoUtil.getMonoMediaInfoBean()（单鱼眼）
+    MediaInfoUtil.getDoubleMediaInfoBean()（双鱼眼）
+    MediaInfoUtil.getNormalMediaInfoBean（非鱼眼）
+    MediaInfoUtil.getEquirectangularMediaInfoBean()
+｝
+```
 ##### 使用示例：
   ```java
   mDoraVideoView.setMediaInfo(MediaInfoUtil.getDoubleMediaInfoBean());
